@@ -13,13 +13,19 @@ Algorithm:
  
 Program:
 
-//type your code here
+int top=-1;
+float stack[100];
 
+void display()
+{
+    for(int i=top;i>=0;i--)
+    {
+        printf("%.1f ",stack[i]);
+    }
+}
 Output:
 
-//paste your output here
-
-
+![image](https://github.com/user-attachments/assets/2d0718d9-5e75-4d6a-b8a5-360b524a5153)
 
 Result:
 Thus, the program to display stack elements using an array is verified successfully.
@@ -36,14 +42,16 @@ Algorithm:
  
 Program:
 
-//type your code here
+int stack[100], top = -1;  
+
+void push(int data) 
+{  
+    stack[++top] = data;  
+}  
 
 Output:
 
-//paste your output here
-
-
-
+![image](https://github.com/user-attachments/assets/341761b4-30d1-491e-8cad-4535156f46b2)
 
 Result:
 Thus, the program to push the given element in to a stack using array is verified successfully
@@ -62,11 +70,20 @@ Algorithm:
  
 Program:
 
-//type your code here
+int rear = -1, front = -1, size = 3;
+float queue[50];
+
+void enqueue(float data) 
+{
+    if (rear == size - 1) return;
+    if (front == -1) front = 0;
+    queue[++rear] = data;
+}
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/098eb367-df3c-4458-9d20-cac9007c55de)
+
 
 
 Result:
@@ -86,11 +103,19 @@ Algorithm:
 
 Program:
 
-//type your code here
+int front=-1,rear=-1,size=3;
+char queue[50];
+void enqueue(char data)
+{
+    if(rear ==size-1)return;
+    if(front==-1)front =0;
+    queue[++rear]=data;
+    
+}
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/20e59b02-caa8-484f-86e0-3a217a6930ae)
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -121,11 +146,19 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 Program:
 
-//type your code here
+int front, rear;  
+int queue[50];  
+void dequeue()  
+{  
+    if (front == -1 || front > rear) printf("Queue is empty");  
+    else front++;  
+}  
+
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/71792d6f-bb6e-4646-bff9-fe148a376eee)
+
 
 
 Result:
